@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+    <style>
+        /*
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        */
+    </style>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section data-background-image="./img/1.png"></section>
+                <section data-background-image="./img/2.png"></section>
+                <section data-background-image="./img/3.png"></section>
+                <section data-background-image="./img/4.png"></section>
+                <section data-background-image="./img/5.png"></section>
+                <section data-background-image="./img/6.png"></section>
+                <section data-background-image="./img/7.png"></section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                //view: 'scroll',
+                controlsLayout: 'edges',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+            /*
+
+            //add fade in effect when page loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                    // Get the body element
+                    var body = document.body;
+                    // Trigger a reflow to apply the initial styles
+                    void body.offsetWidth;
+                    // Remove the initial opacity to reveal the entire page
+                    body.style.opacity = '1';
+                    });
+
+                */
+
+		</script>
+	</body>
+</html>
