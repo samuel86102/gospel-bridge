@@ -13,25 +13,43 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+        <!-- Chalkboard -->
+        <!-- Font awesome is required for the chalkboard plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Custom controls plugin is used to for opening and closing annotation modes. -->
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/plugin.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/style.css">
+        <!-- Chalkboard plugin -->
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css">
+
+
 	</head>
     <style>
-        /*
-        body {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+        .reveal>.overlay{
+            -webkit-backdrop-filter:blur(0px);
+            backdrop-filter:blur(0px);
         }
-        */
     </style>
 	<body>
 		<div class="reveal">
 			<div class="slides">
                 <section data-background-image="./img/1.png"></section>
                 <section data-background-image="./img/2.png"></section>
-                <section data-background-image="./img/3.png"></section>
-                <section data-background-image="./img/4.png"></section>
-                <section data-background-image="./img/5.png"></section>
+                <section>
+                    <section data-background-image="./img/3.png" data-background-transition="slide"></section>
+                    <section data-background-image="./img/4.png" data-background-transition="slide"></section>
+                </section>
+                <section>
+                    <section data-background-image="./img/5.png" data-background-transition="slide"></section>
+                    <section data-background-image="./img/4.png" data-background-transition="slide"></section>
+                </section>
                 <section data-background-image="./img/6.png"></section>
                 <section data-background-image="./img/7.png"></section>
+                <section data-background-image="./img/8.png"></section>
 
 			</div>
 		</div>
@@ -41,31 +59,64 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
+
+            Reveal.initialize({
+
+
 				hash: true,
                 //view: 'scroll',
                 controlsLayout: 'edges',
+                controls: false,
+                navigationMode: 'grid',
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
+                customcontrols: {
+                    controls: [
+                    { icon: '<i class="fa fa-pen-square"></i>',
+                        title: 'Toggle chalkboard (B)',
+                        action: 'RevealChalkboard.toggleChalkboard();'
+                    },
+                    { icon: '<i class="fa fa-pen"></i>',
+                        title: 'Toggle notes canvas (C)',
+                        action: 'RevealChalkboard.toggleNotesCanvas();'
+                    }
+                    ]
+                },
+                chalkboard: {
 
-            /*
+                    boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+                    // add configuration here
+                },
 
-            //add fade in effect when page loaded
-            document.addEventListener('DOMContentLoaded', function () {
-                    // Get the body element
-                    var body = document.body;
-                    // Trigger a reflow to apply the initial styles
-                    void body.offsetWidth;
-                    // Remove the initial opacity to reveal the entire page
-                    body.style.opacity = '1';
-                    });
-
-                */
+                plugins: [ RevealChalkboard, RevealCustomControls ],
+            });
 
 		</script>
 	</body>
