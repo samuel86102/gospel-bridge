@@ -87,7 +87,7 @@
                 },
 				  multiplex: {
     // Example values. To generate your own, see the socket.io server instructions.
-    secret: 'null', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+    secret: '17053972908832551076', // Obtained from the socket.io server. Gives this (the master) control of the presentation
     id: 'b88c9c9c7d413241', // Obtained from socket.io server
     url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
   },
@@ -95,8 +95,8 @@
   // Don't forget to add the dependencies
   dependencies: [
     { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
-  ],
+    { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+],
 
 
                 plugins: [ RevealChalkboard, RevealCustomControls ],
