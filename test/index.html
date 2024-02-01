@@ -47,20 +47,36 @@
         img {
             max-width: 100%;
             max-height: 100%;
-            width: auto;
+            width: 40%;
             height: auto;
         }
+
+        #fullscreenButton {
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+#fullscreenButton:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
+}
 
 
     </style>
 	<body>
+
 
 		<div class="reveal">
 			<div class="slides">
 
 
 
-                <section data-background-image="/img/ver1-0.png"></section>
+                <section>
+
+                    <img src="/img/icon.png" id="fullscreenButton">
+                    <h4>點擊進入全螢幕</h4>
+
+
+                </section>
                 <section>
                     <section data-background-image="/img/ver1-1_.png"></section>
                     <section data-background-image="/img/ver1-2_.png"></section>
@@ -121,10 +137,23 @@
   ],
 
 
-                plugins: [ RevealChalkboard, RevealCustomControls ],
+                //plugins: [ RevealChalkboard, RevealCustomControls ],
 
 
             });
+
+            document.getElementById("fullscreenButton").addEventListener("click", function() {
+  var element = document.documentElement;
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+});
 
 		</script>
 	</body>
