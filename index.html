@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="全新線上版福音橋，隨時和周圍的人傳揚福音">
 
-		<title>線上版福音橋(測試版)</title>
+		<title>線上版福音橋</title>
 
 		<link rel="icon" href="/img/icon.png" type="image/png">
 
@@ -35,10 +35,23 @@
             -webkit-backdrop-filter:blur(0px);
             backdrop-filter:blur(0px);
         }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 40%;
+            height: auto;
+        }
     </style>
 	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h4>正式版未上線，再等一下喔！</h4>
+                    <img src="/img/icon.png" id="fullscreenButton">
+                </section>
+            </div>
+        </div>
         <!--
-
 		<div class="reveal">
 			<div class="slides">
                 <section data-background-image="/img/1.png"></section>
@@ -102,8 +115,7 @@
   ],
 
 
-                plugins: [ RevealChalkboard, RevealCustomControls ],
-
+                //plugins: [ RevealChalkboard, RevealCustomControls ],
 
             });
 
