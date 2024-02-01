@@ -154,6 +154,13 @@
   } else if (element.msRequestFullscreen) {
     element.msRequestFullscreen();
   }
+
+  if (screen.orientation) {
+      // Attempt to lock the screen orientation to landscape
+      screen.orientation.lock("landscape");
+    }
+
+
 });
 
 		</script>
