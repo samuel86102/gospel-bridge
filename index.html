@@ -92,7 +92,7 @@
 
                 <section>
 
-                    <h4>線上福音橋</h4>
+                    <h4>線上福音橋 1801</h4>
                     <img src="/img/icon.png" id="fullscreenButton">
                     <h4>點擊進入全螢幕<br> 並將裝置橫放</h4>
 
@@ -240,22 +240,26 @@
 
             });
 
-            document.getElementById("fullscreenButton").addEventListener("click", function() {
-  var element = document.documentElement;
-  if (element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if (element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if (element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen();
-  } else if (element.msRequestFullscreen) {
-    element.msRequestFullscreen();
-  }
 
-  if (screen.orientation) {
-      // Attempt to lock the screen orientation to landscape
-      screen.orientation.lock("landscape");
-    }
+
+            document.getElementById("fullscreenButton").addEventListener("click", function() {
+            var element = document.documentElement;
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            } else if (element.webkitEnterFullscreen) {
+                element.webkitEnterFullscreen(); // For Safari on iOS
+            }
+
+            if (screen.orientation) {
+            // Attempt to lock the screen orientation to landscape
+            screen.orientation.lock("landscape");
+            }
 
 
 });
