@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <meta name="description" content="全新線上版福音橋，任何裝置皆可使用，隨時和身別的人傳福音。「神愛世人，甚至將祂的獨生子賜給他們，叫一切信祂的不致滅亡，反得永生。」">
 
-		<title>線上福音橋 Beta</title>
+		<title>線上福音橋 測試Beta版</title>
 
         <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
@@ -96,6 +96,15 @@
             letter-spacing: 0.1em; /* Increase or decrease the space between characters */
             line-height: 2 !important; /* Increases the line height to 1.5 times the font size */
         }
+        .slide-text-msg{
+            position: relative;
+            top:2em;
+            right:5em;
+            color:#606060;
+            font-size: 1em;
+            letter-spacing: 0.1em; /* Increase or decrease the space between characters */
+            line-height: 2 !important; /* Increases the line height to 1.5 times the font size */
+        }
         .slide-text-prayer{
             /*color:#191919;*/
             font-weight: regular;
@@ -114,6 +123,12 @@
         #svg-god{
             position: relative;
             width:50%;
+            top:2em;
+            z-index: 1;
+        }
+        #svg-god-hug{
+            position: relative;
+            width:80%;
             top:2em;
             z-index: 1;
         }
@@ -166,14 +181,19 @@
 
                 <section>
                     <img src="/img/icon.png" id="fullscreenButton" alt="gospel bridge icon">
-                    <h4>線上福音橋 Beta</h4>
-                    <p>vector.ver 02092253</p>
+                    <h4>線上福音橋 測試Beta版</h4>
+                    <p>vector.ver 02101129</p>
                 </section>
 
                 <!--犯罪-->
                 <section>
                     <section data-background-image="/img/14.png">
                         <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>罪使我與上帝隔絕</strong>
+                                </p>
+                            </div>
                             <div class="row align-items-center">
                                 <div class="col-5">
                                     <img id="svg-me" src="/img/me.svg" alt="SVG 1">
@@ -221,6 +241,11 @@
 
                         <div class="container-fluid">
                             <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>我不能救自己</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
                                 <div class="col-5">
                                     <img id="svg-me" src="/img/me.svg" alt="SVG 1">
                                 </div>
@@ -250,6 +275,11 @@
                 <section>
                     <section data-background-image="/img/14.png">
                         <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>唯有<span style="color:#f51671">耶穌</span>才能拯救我</strong>
+                                </p>
+                            </div>
                             <div class="row align-items-center">
                                 <div class="col-5">
                                     <img id="svg-me" src="/img/me-shock.svg" alt="SVG 1">
@@ -295,7 +325,7 @@
                                 <div class="col-2">
                                 </div>
                                 <div class="col-6">
-                                    <img id="svg-god" src="/img/hug.svg" alt="SVG 1">
+                                    <img id="svg-god-hug" src="/img/hug.svg" alt="SVG 1">
                                 </div>
                             </div>
                             <div class="row align-items-center">
@@ -312,6 +342,7 @@
                             </div>
                         </div>
                     </section>
+                    <!--
                     <section>
                         <p class="slide-text">
                             「神愛世人，甚至將祂的獨生子賜給他們，<br>叫一切信祂的不致滅亡，反得永生。」
@@ -321,6 +352,9 @@
 
                     </section>
 
+
+                    -->
+
                 </section>
               
 
@@ -329,6 +363,11 @@
 
                     <div class="container-fluid">
                         <div class="row align-items-center">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong><span style="color:#8c4db5">你願意走到橋的對面嗎</span></strong>
+                                </p>
+                            </div>
                             <div class="col-5">
                                 <img id="svg-question" src="/img/question.svg" alt="SVG 1">
                             </div>
@@ -353,14 +392,19 @@
                     </div>
                 </section>
                 <section data-background-color="white">
-                    <h3 style="color:#9452b4">我的禱告</h3>
+                    <h3 style="color:#9452b4"><strong>我的禱告</strong></h3>
                         <p class="slide-text-prayer">
-                            主耶穌，謝謝祢為我死在十字架上<br>
-                            我犯了罪，得罪了祢，對不起<br>
-                            我現在悔改，離棄我一切的罪<br>
-                            請求祢赦免我的罪，<br>
-                            作我的救主、我的上帝和我生命的主<br>
-                            奉主耶穌的名禱告，阿們
+                            <strong>
+                                主耶穌，謝謝祢為我死在十字架上<br>
+                                我犯了罪，得罪了祢，對不起<br>
+                                我現在悔改，離棄我一切的罪<br>
+                                請求祢赦免我的罪，<br>
+                                作我的救主、我的上帝和我生命的主<br>
+                                奉主耶穌的名禱告，阿們
+
+
+                            </strong>
+                    
                         </p>
 
                 </section>
