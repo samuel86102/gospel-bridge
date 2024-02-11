@@ -74,6 +74,7 @@
             */
         }
 
+
         img {
             max-width: 100%;
             max-height: 100%;
@@ -121,14 +122,20 @@
         }
         #svg-god{
             position: relative;
-            width:100%;
-            top:3em;
+            width:50%;
+            top:2em;
+            z-index: 1;
+        }
+        #svg-god-hug{
+            position: relative;
+            width:80%;
+            top:2em;
             z-index: 1;
         }
         #svg-me{
             position: relative;
-            width:60%;
-            top:3.5em;
+            width:50%;
+            top:3em;
             z-index: 1;
         }
         #svg-question{
@@ -140,11 +147,12 @@
 
         #svg-cross{
             position: relative;
-            width:100%;
+            width:200%;
             z-index: 1;
         }
 
         #svg-left{
+
             position: relative;
             width:100%;
         }
@@ -155,15 +163,8 @@
         #svg-stone{
             position: relative;
             width:60%;
-            top:4em;
-            right:3.5em;
-        }
-        #svg-stone-fall{
-            position: relative;
-            width:100%;
-            top:7em;
-            right:0.5em;
-            z-index: 1;
+            top:2.5em;
+            right:3em;
         }
         .reveal .slides>section, .reveal .slides>section>section{
             transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important;
@@ -181,7 +182,7 @@
                 <section>
                     <img src="/img/icon.png" id="fullscreenButton" alt="gospel bridge icon">
                     <h4>線上福音橋 測試Beta版</h4>
-                    <p>vector.ver 02111847</p>
+                    <p>vector.ver 02101129</p>
                 </section>
 
                 <!--犯罪-->
@@ -234,15 +235,14 @@
 
                 </section>
                
+
                 <!--靠自己-->
                     <section data-background-image="/img/14.png">
 
                         <div class="container-fluid">
                             <div class="row align-items-center">
                                 <p class="slide-text-msg">
-                                    <strong>靠著<span style="color:#24d9a2;">宗教</span>、
-                                        <span style="color:#24bbda;">好行為</span>、
-                                        <span style="color:#2447d9;">道德</span></strong>
+                                    <strong>我不能救自己</strong>
                                 </p>
                             </div>
                             <div class="row align-items-center">
@@ -270,53 +270,6 @@
                             </div>
                         </div>
                     </section>
-
-                <!--靠自己無法-->
-                    <section data-background-image="/img/14.png">
-
-                        <div class="container-fluid">
-                            <div class="row align-items-center">
-                                <p class="slide-text-msg">
-                                    <strong>我不能救自己</strong>
-                                </p>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-5">
-                                    <img id="svg-me" src="/img/me.svg" alt="SVG 1">
-                                </div>
-                                <div class="col-2">
-                                    <img id="svg-stone-fall" src="/img/stone-fall.svg" alt="SVG 1">
-                                </div>
-                                <div class="col-5">
-                                    <img id="svg-god" src="/img/god.svg" alt="SVG 1">
-                                </div>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-5">
-                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
-                                </div>
-                                <div class="col-2">
-                                    <h1 style="color:#606060">罪</h1>
-                                </div>
-                                <div class="col-5">
-                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                <section data-background-color="white">
-                    <p class="slide-text-prayer" style="color:#606060;">
-                        <strong>
-
-                            我無法靠自己到上帝那邊<br>
-                            然而...有個 <span style="color:#f51671;font-size:1.5em">好消息</span>
-
-                        </strong>
-                    </p>
-                </section>
 
                 <!--救贖-->
                 <section>
@@ -352,7 +305,7 @@
                     </section>
                     <section>
                         <p class="slide-text">
-                            耶穌說：「我就是道路、真理、生命。<br>若不藉著我，沒有人能到父那裡去。」
+                            耶穌說：「我就是道路、真理、生命。<br>若不藉著我，沒有人能到父那裡去。
                             <br>
                             約翰福音 14:6
                         </p>
@@ -367,33 +320,29 @@
 
                         <div class="container-fluid">
                             <div class="row align-items-center">
-                                <p class="slide-text-msg">
-                                    <strong>唯有<span style="color:#f51671">耶穌</span>才能拯救我</strong>
-                                </p>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-5">
+                                <div class="col-4">
                                 </div>
                                 <div class="col-2">
                                 </div>
-                                <div class="col-5">
-                                    <img id="svg-god" src="/img/hug.svg" alt="SVG 1">
+                                <div class="col-6">
+                                    <img id="svg-god-hug" src="/img/hug.svg" alt="SVG 1">
                                 </div>
                             </div>
                             <div class="row align-items-center">
-                                <div class="col-5">
+                                <div class="col-4">
                                     <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
                                 </div>
                                 <div class="col-2">
                                     <img id="svg-cross" src="/img/cross.svg" alt="SVG 1">
                                 </div>
-                                <div class="col-5">
+                                <div class="col-6">
                                     <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
                                 </div>
 
                             </div>
                         </div>
                     </section>
+                    <!--
                     <section>
                         <p class="slide-text">
                             「神愛世人，甚至將祂的獨生子賜給他們，<br>叫一切信祂的不致滅亡，反得永生。」
@@ -403,6 +352,8 @@
 
                     </section>
 
+
+                    -->
 
                 </section>
               
