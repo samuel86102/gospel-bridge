@@ -2,35 +2,56 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="description" content="全新線上版福音橋，隨時和周圍的人傳揚福音">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="description" content="全新線上版福音橋，任何裝置皆可使用，隨時和身別的人傳福音。「神愛世人，甚至將祂的獨生子賜給他們，叫一切信祂的不致滅亡，反得永生。」">
 
+		<title>線上福音橋&nbsp;Gospel Bridge | 隨時隨地分享福音</title>
 
-		<title>線上版福音橋</title>
-
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+        <link rel="manifest" href="/icon/site.webmanifest">
+        <!--
 		<link rel="icon" href="/img/icon.png" type="image/png">
+        -->
 
 		<link rel="stylesheet" href="/dist/reset.css">
 		<link rel="stylesheet" href="/dist/reveal.css">
 		<link rel="stylesheet" href="/dist/theme/black.css">
 
 		<!-- Theme used for syntax highlighted code -->
+        <!--
 		<link rel="stylesheet" href="/plugin/highlight/monokai.css">
+        -->
 
 
         <!-- Chalkboard -->
         <!-- Font awesome is required for the chalkboard plugin -->
+        <!--
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        -->
         <!-- Custom controls plugin is used to for opening and closing annotation modes. -->
+        <!--
         <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/plugin.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/style.css">
+        -->
         <!-- Chalkboard plugin -->
+        <!--
         <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css">
+        -->
 
 
 	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1KW5ECFB1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-N1KW5ECFB1');
+	</script>
     <style>
         .reveal>.overlay{
             -webkit-backdrop-filter:blur(0px);
@@ -60,8 +81,10 @@
         #fullscreenButton:hover {
             transform: scale(1.1); /* Scale up by 10% on hover */
         }
+
         .slide-text{
             /*color:#191919;*/
+            font-size: 1em;
             letter-spacing: 0.1em; /* Increase or decrease the space between characters */
             line-height: 2 !important; /* Increases the line height to 1.5 times the font size */
         }
@@ -75,11 +98,23 @@
             color: #191919;
         }
 
+        .feedback-text{
+            font-size: 0.8em;
+            text-align: right;
+            padding-top: 10em;
+            padding-right: 4em;
+
+        }
 
 
-        .slide-blur{
-            backdrop-filter: blur(10px);
-            background-image: url('/img/ver1-0.jpg');
+        .church-logo {
+            width: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .church-logo:hover {
+            transform: scale(1.1); /* Scale up by 10% on hover */
         }
 
 
@@ -90,25 +125,24 @@
 		<div class="reveal">
 			<div class="slides">
 
-                <section data-background-image="/img/11.png"></section>
+                <section data-background-image="/img/test/1.png"></section>
 
                 <section>
 
-                    <img src="/img/icon.png" id="fullscreenButton">
+                    <img src="/img/icon.png" id="fullscreenButton" alt="gospel bridge icon">
                     <h4>線上福音橋</h4>
 
                 </section>
-
-
-
-
                 <section>
 
-                    <section data-background-image="/img/2.png"></section>
+                    <section data-background-image="/img/test/3.png"></section>
 
                     <section>
                         <p class="slide-text">
+                            <strong>
+
                             「因為世人都犯了罪，虧缺了上帝的榮耀」
+                            </strong>
                             <br>
                             羅馬書 3:23
                         </p>
@@ -118,11 +152,15 @@
 
                 <section>
 
-                    <section data-background-image="/img/3.png"></section>
+                    <section data-background-image="/img/test/4.png"></section>
 
                     <section>
                         <p class="slide-text">
+                            <strong>
+
                             「因為罪的工價乃是死......」
+
+                            </strong>
                             <br>
                             羅馬書 6:23
                         </p>
@@ -130,35 +168,51 @@
 
 
                 </section>
-                <section data-background-image="/img/4.png"></section>
+                <section data-background-image="/img/test/5.png"></section>
 
 
+                <section data-background-image="/img/test/6.png"></section>
 
-                <section data-background-image="/img/5.png"></section>
 
-
-                <section data-background-image="/img/10.png"></section>
+                <section data-background-image="/img/test/7.png"></section>
 
                 <section>
-                    <section data-background-image="/img/6.png"></section>
+                    <section data-background-image="/img/test/8.png"></section>
                     <section>
                         <p class="slide-text">
-                            耶穌說：「我就是道路、真理、生命。若不藉著我，沒有人能到父那裡去。
+                            <strong>
+                            耶穌說：「我就是道路、真理、生命。<br>若不藉著我，沒有人能到父那裡去。」
+
+                            </strong>
                             <br>
                             約翰福音 14:6
                         </p>
                     </section>
+
+                    <section>
+                        <p class="slide-text">
+                            <strong>
+                            因基督也曾一次為罪受苦，<br>就是義的代替不義的，<br>為要引我們到上帝面前。
+                            </strong>
+                            <br>
+                            彼得前書 3:18
+                        </p>
+                    </section>
+
                 </section>
 
                 <section>
-                    <section data-background-image="/img/7.png"></section>
+                    <section data-background-image="/img/test/9.png"></section>
 
                     <!--
                         <section data-background-color="#FEFCFA">
                         -->
                     <section>
                         <p class="slide-text">
-                            「神愛世人，甚至將祂的獨生子賜給他們，叫一切信祂的不致滅亡，反得永生。」
+                            <strong>
+
+                            「神愛世人，甚至將祂的獨生子賜給他們，<br>叫一切信祂的不致滅亡，反得永生。」
+                            </strong>
                             <br>
                             約翰福音 3:16
                         </p>
@@ -166,8 +220,8 @@
                     </section>
                 </section>
 
-                <section data-background-image="/img/8.png"></section>
-                <section data-background-image="/img/9.png"></section>
+                <section data-background-image="/img/test/10.png"></section>
+                <section data-background-image="/img/test/11.png"></section>
                 <!--
 
                 <section data-background-color="white">
@@ -183,16 +237,35 @@
                 </section>
 
                 -->
-                <section data-background-image="/img/13.png"></section>
+                <section data-background-image="/img/test/13.png">
+                    <p class="feedback-text">
+                        <a href="https://forms.gle/Vq3nGxmVm6EjuHXRA">填寫回饋表單</a>
+                    </p>
+                </section>
+
+
+                <section data-background-image="/img/test/14.png">
+                    <p class="church-text">
+                        <a href="https://smbch.org/" target="_blank">
+
+                            <img class="church-logo" src="/img/smbc_circle.png">
+
+
+
+                        </a>
+                    </p>
+                </section>
 
 
 			</div>
 		</div>
 
 		<script src="/dist/reveal.js"></script>
+        <!--
 		<script src="/plugin/notes/notes.js"></script>
 		<script src="/plugin/markdown/markdown.js"></script>
 		<script src="/plugin/highlight/highlight.js"></script>
+        -->
 		<script>
 
             Reveal.initialize({
@@ -203,46 +276,10 @@
                 controls: true,
                 navigationMode: 'default',
                 //backgroundTransition: 'slide',
-
-				  autoSlide: 5000,
-				loop: true,
-
-
-
-                customcontrols: {
-                    controls: [
-                    { icon: '<i class="fa fa-pen-square"></i>',
-                        title: 'Toggle chalkboard (B)',
-                        action: 'RevealChalkboard.toggleChalkboard();'
-                    },
-                    { icon: '<i class="fa fa-pen"></i>',
-                        title: 'Toggle notes canvas (C)',
-                        action: 'RevealChalkboard.toggleNotesCanvas();'
-                    }
-                    ]
-                },
-                chalkboard: {
-                    // add configuration here
-                },
-				  multiplex: {
-    // Example values. To generate your own, see the socket.io server instructions.
-    secret: 'null', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-    id: '8ab74967accc626c', // Obtained from socket.io server
-    url: 'http://172.105.238.49:1948' // Location of socket.io server
-  },
-
-  // Don't forget to add the dependencies
-  dependencies: [
-    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
-  ],
-
-
                 //plugins: [ RevealChalkboard, RevealCustomControls ],
 
 
             });
-
 
 
             document.getElementById("fullscreenButton").addEventListener("click", function() {

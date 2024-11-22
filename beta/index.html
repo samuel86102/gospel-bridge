@@ -21,6 +21,13 @@
 		<link rel="stylesheet" href="/dist/reveal.css">
 		<link rel="stylesheet" href="/dist/theme/black.css">
 
+
+
+        <!-- Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
         <!--
 		<link rel="stylesheet" href="/bs-dist/css/bootstrap.min.css">
 
@@ -54,6 +61,23 @@
 	</head>
 
     <style>
+
+        /*
+        <uniquifier>: Use a unique and descriptive class name
+        <weight>: Use a value from 100 to 900
+        */
+
+        :root {
+        --r-heading-font: 'Inter, sans-serif';
+        --r-main-font: 'Inter, sans-serif';
+        }
+
+        .inter-font-text body{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        }
 
         /* modify bs5 css for visibility*/
         .fade:not(.show) {
@@ -97,17 +121,17 @@
         }
         .slide-text-msg{
             position: relative;
-            top:2em;
-            right:5em;
+            top:3em;
+            right:3em;
             color:#606060;
-            font-size: 1em;
+            font-size: 1.2em;
             letter-spacing: 0.1em; /* Increase or decrease the space between characters */
             line-height: 2 !important; /* Increases the line height to 1.5 times the font size */
         }
         .slide-text-prayer{
             /*color:#191919;*/
             font-weight: regular;
-            font-size: 1em;
+            font-size: 1.2em;
             letter-spacing: 0.1em; /* Increase or decrease the space between characters */
             line-height: 1.5 !important; /* Increases the line height to 1.5 times the font size */
         }
@@ -133,11 +157,16 @@
         }
         #svg-question{
             position: relative;
-            width:25%;
-            top:1em;
+            width:30%;
+            top:3em;
             z-index: 1;
         }
 
+        #svg-death{
+            position: relative;
+            width:80%;
+            z-index: 1;
+        }
         #svg-cross{
             position: relative;
             width:100%;
@@ -165,9 +194,43 @@
             right:0.5em;
             z-index: 1;
         }
+
+
+
+        .church-logo {
+            width: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .church-logo:hover {
+            transform: scale(1.1); /* Scale up by 10% on hover */
+        }
+
+        .rotate-img{
+            width:25%;
+        }
+        .text-container {
+            display: flex;
+            align-items: center; /* Centers the arrow vertically */
+            justify-content:center;
+        }
+
+        .arrow {
+            font-size:1.2rem;
+            vertical-align: middle; /* Simple alignment */
+        }
+        #arrow-r {
+            width: 3%;
+        }
+        #arrow-d {
+            width: 5%;
+        }
+
+       /*
         .reveal .slides>section, .reveal .slides>section>section{
             transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important;
-        }
+        }*/
             /* transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important; */
 
     </style>
@@ -177,6 +240,24 @@
 		<div class="reveal">
 			<div class="slides">
 
+                <section>
+                    <h2>使用說明</h2>
+                    <img class="rotate-img" src="/img/rotate.svg" id="fullscreenButton" alt="gospel bridge icon">
+                    <p>請將裝置橫放，以達最佳效果</p>
+
+                    <div class="text-container">
+                        <p>
+                            <span class="arrow">
+                                <img src="/img/arrow-r.svg" id="arrow-r">
+                            </span>
+                            &nbsp;為下一段內容&nbsp;
+                            <span class="arrow">
+                                <img src="/img/arrow-d.svg" id="arrow-d">
+                            </span>
+                            &nbsp;為補充經文
+                        </p>
+                    </div>
+                </section>
 
                 <section>
                     <img src="/img/icon.png" id="fullscreenButton" alt="gospel bridge icon">
@@ -224,6 +305,41 @@
                             羅馬書 3:23
                         </p>
                     </section>
+                </section>
+
+                 <!--犯罪 死-->
+                <section>
+                    <section data-background-image="/img/14.png">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>&nbsp;</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-me" src="/img/me.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/god.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <img id="svg-death" src="/img/death.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section>
                         <p class="slide-text">
                             「因為罪的工價乃是死......」
@@ -458,6 +574,25 @@
                     
                         </p>
 
+                </section>
+
+
+                <section data-background-image="/img/test/14.png">
+                    <p class="church-text">
+                        <a href="https://smbch.org/" target="_blank">
+
+                            <img class="church-logo" src="/img/smbc_circle.png">
+
+                        </a>
+                    </p>
+                </section>
+
+
+                <section>
+                    <img src="/img/write.png" id="fullscreenButton" alt="gospel bridge icon">
+                    <h4>
+                    <a href="https://forms.gle/Vq3nGxmVm6EjuHXRA">填寫回饋表單</a>
+                    </h4>
                 </section>
 
 

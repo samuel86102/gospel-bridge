@@ -15,9 +15,24 @@
 		<link rel="icon" href="/img/icon.png" type="image/png">
         -->
 
+		<link rel="stylesheet" href="/bs-dist/css/bootstrap.min.css">
+
 		<link rel="stylesheet" href="/dist/reset.css">
 		<link rel="stylesheet" href="/dist/reveal.css">
 		<link rel="stylesheet" href="/dist/theme/black.css">
+
+
+
+        <!-- Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!--
+		<link rel="stylesheet" href="/bs-dist/css/bootstrap.min.css">
+
+        -->
+
 
 		<!-- Theme used for syntax highlighted code -->
         <!--
@@ -44,15 +59,30 @@
 
 
 	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1KW5ECFB1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-N1KW5ECFB1');
-	</script>
+
     <style>
+
+        /*
+        <uniquifier>: Use a unique and descriptive class name
+        <weight>: Use a value from 100 to 900
+        */
+
+        :root {
+        --r-heading-font: 'Inter, sans-serif';
+        --r-main-font: 'Inter, sans-serif';
+        }
+
+        .inter-font-text body{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        }
+
+        /* modify bs5 css for visibility*/
+        .fade:not(.show) {
+            opacity: 1;
+        }
         .reveal>.overlay{
             -webkit-backdrop-filter:blur(0px);
             backdrop-filter:blur(0px);
@@ -63,7 +93,9 @@
         }
         .reveal-viewport {
 
-            /*background-color:white;*/
+            /*
+            background-color:white;
+            */
         }
 
         img {
@@ -81,21 +113,27 @@
         #fullscreenButton:hover {
             transform: scale(1.1); /* Scale up by 10% on hover */
         }
-
         .slide-text{
             /*color:#191919;*/
             font-size: 1em;
             letter-spacing: 0.1em; /* Increase or decrease the space between characters */
             line-height: 2 !important; /* Increases the line height to 1.5 times the font size */
         }
-
-        .slide-black{
-            color:white;
-            background-color: #191919;
-
+        .slide-text-msg{
+            position: relative;
+            top:3em;
+            right:3em;
+            color:#606060;
+            font-size: 1.2em;
+            letter-spacing: 0.1em; /* Increase or decrease the space between characters */
+            line-height: 2 !important; /* Increases the line height to 1.5 times the font size */
         }
-        .slide-white{
-            color: #191919;
+        .slide-text-prayer{
+            /*color:#191919;*/
+            font-weight: regular;
+            font-size: 1.2em;
+            letter-spacing: 0.1em; /* Increase or decrease the space between characters */
+            line-height: 1.5 !important; /* Increases the line height to 1.5 times the font size */
         }
 
         .feedback-text{
@@ -105,6 +143,59 @@
             padding-right: 4em;
 
         }
+        #svg-god{
+            position: relative;
+            width:100%;
+            right:1rem;
+            top:3.2em;
+            z-index: 1;
+        }
+        #svg-me{
+            position: relative;
+            width:60%;
+            top:3.5em;
+            z-index: 1;
+        }
+        #svg-question{
+            position: relative;
+            width:30%;
+            top:3em;
+            z-index: 1;
+        }
+
+        #svg-death{
+            position: relative;
+            width:80%;
+            z-index: 1;
+        }
+        #svg-cross{
+            position: relative;
+            width:100%;
+            z-index: 1;
+        }
+
+        #svg-left{
+            position: relative;
+            width:100%;
+        }
+        #svg-right{
+            position: relative;
+            width:100%;
+        }
+        #svg-stone{
+            position: relative;
+            width:60%;
+            top:4em;
+            right:3.5em;
+        }
+        #svg-stone-fall{
+            position: relative;
+            width:100%;
+            top:7em;
+            right:0.5em;
+            z-index: 1;
+        }
+
 
 
         .church-logo {
@@ -117,6 +208,31 @@
             transform: scale(1.1); /* Scale up by 10% on hover */
         }
 
+        .rotate-img{
+            width:25%;
+        }
+        .text-container {
+            display: flex;
+            align-items: center; /* Centers the arrow vertically */
+            justify-content:center;
+        }
+
+        .arrow {
+            font-size:1.2rem;
+            vertical-align: middle; /* Simple alignment */
+        }
+        #arrow-r {
+            width: 3%;
+        }
+        #arrow-d {
+            width: 5%;
+        }
+
+       /*
+        .reveal .slides>section, .reveal .slides>section>section{
+            transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important;
+        }*/
+            /* transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important; */
 
     </style>
 	<body>
@@ -125,122 +241,339 @@
 		<div class="reveal">
 			<div class="slides">
 
-                <section data-background-image="/img/test/1.png"></section>
-
                 <section>
+                    <h2>使用說明</h2>
+                    <img class="rotate-img" src="/img/rotate.svg" id="fullscreenButton" alt="gospel bridge icon">
+                    <p>請將裝置橫放，以達最佳效果</p>
 
-                    <img src="/img/icon.png" id="fullscreenButton" alt="gospel bridge icon">
-                    <h4>線上福音橋</h4>
-
+                    <div class="text-container">
+                        <p>
+                            <span class="arrow">
+                                <img src="/img/arrow-r.svg" id="arrow-r">
+                            </span>
+                            &nbsp;為下一段內容&nbsp;
+                            <span class="arrow">
+                                <img src="/img/arrow-d.svg" id="arrow-d">
+                            </span>
+                            &nbsp;為補充經文
+                        </p>
+                    </div>
                 </section>
-                <section>
 
-                    <section data-background-image="/img/test/3.png"></section>
+                <section>
+                    <img src="/img/icon.png" id="fullscreenButton" alt="gospel bridge icon">
+                    <h4>線上福音橋 v2</h4>
+                </section>
+
+                <!--犯罪-->
+                <section>
+                    <section data-background-image="/img/14.png">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>罪使我與上帝隔絕</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-me" src="/img/me.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/god.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <h1 style="color:#606060">罪</h1>
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <section>
                         <p class="slide-text">
-                            <strong>
-
                             「因為世人都犯了罪，虧缺了上帝的榮耀」
-                            </strong>
                             <br>
                             羅馬書 3:23
                         </p>
                     </section>
-
                 </section>
 
+                 <!--犯罪 死-->
                 <section>
-
-                    <section data-background-image="/img/test/4.png"></section>
+                    <section data-background-image="/img/14.png">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>&nbsp;</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-me" src="/img/me.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/god.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <img id="svg-death" src="/img/death.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <section>
                         <p class="slide-text">
-                            <strong>
-
                             「因為罪的工價乃是死......」
-
-                            </strong>
                             <br>
                             羅馬書 6:23
                         </p>
                     </section>
 
-
                 </section>
-                <section data-background-image="/img/test/5.png"></section>
+               
+                <!--靠自己-->
+                    <section data-background-image="/img/14.png">
+
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>靠著<span style="color:#24d9a2;">宗教</span>、
+                                        <span style="color:#24bbda;">好行為</span>、
+                                        <span style="color:#2447d9;">道德</span></strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-me" src="/img/me.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <img id="svg-stone" src="/img/stone.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/god.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <h1 style="color:#606060">罪</h1>
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                <!--靠自己無法-->
+                    <section data-background-image="/img/14.png">
+
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>我不能救自己</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-me" src="/img/me.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <img id="svg-stone-fall" src="/img/stone-fall.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/god.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <h1 style="color:#606060">罪</h1>
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
 
 
-                <section data-background-image="/img/test/6.png"></section>
+                <section data-background-color="white">
+                    <p class="slide-text-prayer" style="color:#606060;">
+                        <strong>
 
+                            我無法靠自己到上帝那邊<br>
+                            然而...有個 <span style="color:#f51671;font-size:1.5em">好消息</span>
 
-                <section data-background-image="/img/test/7.png"></section>
+                        </strong>
+                    </p>
+                </section>
 
+                <!--救贖-->
                 <section>
-                    <section data-background-image="/img/test/8.png"></section>
+                    <section data-background-image="/img/14.png">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>唯有<span style="color:#f51671">耶穌</span>才能拯救我</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-me" src="/img/me-shock.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/god-hug.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <img id="svg-cross" src="/img/cross.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section>
                         <p class="slide-text">
-                            <strong>
                             耶穌說：「我就是道路、真理、生命。<br>若不藉著我，沒有人能到父那裡去。」
-
-                            </strong>
                             <br>
                             約翰福音 14:6
                         </p>
                     </section>
+                </section>
+              
 
-                    <section>
-                        <p class="slide-text">
-                            <strong>
-                            因基督也曾一次為罪受苦，<br>就是義的代替不義的，<br>為要引我們到上帝面前。
-                            </strong>
-                            <br>
-                            彼得前書 3:18
-                        </p>
+
+                <!--過橋-->
+                <section>
+                    <section data-background-image="/img/14.png">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong>唯有<span style="color:#f51671">耶穌</span>才能拯救我</strong>
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                </div>
+                                <div class="col-2">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-god" src="/img/hug.svg" alt="SVG 1">
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-5">
+                                    <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-2">
+                                    <img id="svg-cross" src="/img/cross.svg" alt="SVG 1">
+                                </div>
+                                <div class="col-5">
+                                    <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                                </div>
+
+                            </div>
+                        </div>
                     </section>
 
-                </section>
 
-                <section>
-                    <section data-background-image="/img/test/9.png"></section>
-
-                    <!--
-                        <section data-background-color="#FEFCFA">
-                        -->
                     <section>
                         <p class="slide-text">
-                            <strong>
-
                             「神愛世人，甚至將祂的獨生子賜給他們，<br>叫一切信祂的不致滅亡，反得永生。」
-                            </strong>
                             <br>
                             約翰福音 3:16
                         </p>
 
                     </section>
+
+
                 </section>
+              
 
-                <section data-background-image="/img/test/10.png"></section>
-                <section data-background-image="/img/test/11.png"></section>
-                <!--
+                <!--你願意嗎-->
+                <section data-background-image="/img/14.png">
 
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="row align-items-center">
+                                <p class="slide-text-msg">
+                                    <strong><span style="color:#8c4db5">你願意走到橋的對面嗎</span></strong>
+                                </p>
+                            </div>
+                            <div class="col-5">
+                                <img id="svg-question" src="/img/question.svg" alt="SVG 1">
+                            </div>
+                            <div class="col-2">
+                            </div>
+                            <div class="col-5">
+                                <img id="svg-god" src="/img/god-hug.svg" alt="SVG 1">
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-5">
+                                <img id="svg-left" src="/img/ground.svg" alt="SVG 1">
+                            </div>
+                            <div class="col-2">
+                                <img id="svg-cross" src="/img/cross.svg" alt="SVG 1">
+                            </div>
+                            <div class="col-5">
+                                <img id="svg-right" src="/img/ground.svg" alt="SVG 1">
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
                 <section data-background-color="white">
+                    <h3 style="color:#9452b4"><strong>我的禱告</strong></h3>
+                        <p class="slide-text-prayer" style="color:#606060">
+                            
+                            <strong>
+                                主耶穌，謝謝祢為我死在十字架上<br>
+                                我犯了罪，得罪了祢，對不起<br>
+                                我現在悔改，離棄我一切的罪<br>
+                                請求祢赦免我的罪，<br>
+                                作我的救主、我的上帝和我生命的主<br>
+                                奉主耶穌的名禱告，阿們
 
-                        <p class="slide-text">
-                            <strong>禱告：</strong>
-                            <br>
-                            主耶穌，謝謝祢為我死在十字架上。<br>
-                            我犯了罪，得罪了祢，對不起祢。我現在悔改，背棄我一切的罪。<br>
-                            請求祢赦免我的罪，作我的救主、我的上帝和我生命的主
+
+                            </strong>
+                    
                         </p>
 
-                </section>
-
-                -->
-                <section data-background-image="/img/test/13.png">
-                    <p class="feedback-text">
-                        <a href="https://forms.gle/Vq3nGxmVm6EjuHXRA">填寫回饋表單</a>
-                    </p>
                 </section>
 
 
@@ -250,10 +583,16 @@
 
                             <img class="church-logo" src="/img/smbc_circle.png">
 
-
-
                         </a>
                     </p>
+                </section>
+
+
+                <section>
+                    <img src="/img/write.png" id="fullscreenButton" alt="gospel bridge icon">
+                    <h4>
+                    <a href="https://forms.gle/Vq3nGxmVm6EjuHXRA">填寫回饋表單</a>
+                    </h4>
                 </section>
 
 
@@ -272,6 +611,8 @@
 				hash: true,
                 //view: 'scroll',
                 controlsLayout: 'bottom-right',
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
 
                 controls: true,
                 navigationMode: 'default',
@@ -305,5 +646,7 @@
 });
 
 		</script>
+        <script src="/bs-dist/js/bootstrap.bundle.min.js"></script>
+
 	</body>
 </html>
