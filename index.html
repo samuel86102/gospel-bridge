@@ -61,23 +61,35 @@
 	</head>
 
     <style>
+		@font-face {
+		  font-family: 'Taipei Sans';
+		  src: url('/font/TaipeiSansTCBeta-Bold.ttf') format('truetype');
+		  font-weight: bold; /* Optional: Define weights */
+		  font-style: normal; /* Optional: Define styles */
+		}
 
-        /*
-        <uniquifier>: Use a unique and descriptive class name
-        <weight>: Use a value from 100 to 900
-        */
+		@font-face {
+		  font-family: 'Taipei Sans';
+		  src: url('/font/TaipeiSansTCBeta-Regular.ttf') format('truetype');
+		  font-weight: normal; /* Optional: Define weights */
+		  font-style: normal; /* Optional: Define styles */
+		}
 
-        :root {
-        --r-heading-font: 'Inter, sans-serif';
-        --r-main-font: 'Inter, sans-serif';
+        section{
+            /*
+            font-family: 'Taipei Sans', sans-serif;
+            font-weight: bold;
+            */
+        }
+        :root{
+
+            --r-main-font: 'Taipei Sans';
+            --r-heading-font-weight: bold;
+            --r-heading-font: #{$headingFont};
+
+
         }
 
-        .inter-font-text body{
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-        }
 
         /* modify bs5 css for visibility*/
         .fade:not(.show) {
@@ -233,6 +245,11 @@
             transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important;
         }*/
             /* transition: transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)!important; */
+
+
+
+
+
 
     </style>
 	<body>
