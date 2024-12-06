@@ -28,6 +28,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+
+        <!-- Noto Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+
         <!--
 		<link rel="stylesheet" href="/bs-dist/css/bootstrap.min.css">
 
@@ -61,19 +70,7 @@
 	</head>
 
     <style>
-		@font-face {
-		  font-family: 'Taipei Sans';
-		  src: url('/font/TaipeiSansTCBeta-Bold.ttf') format('truetype');
-		  font-weight: bold; /* Optional: Define weights */
-		  font-style: normal; /* Optional: Define styles */
-		}
 
-		@font-face {
-		  font-family: 'Taipei Sans';
-		  src: url('/font/TaipeiSansTCBeta-Regular.ttf') format('truetype');
-		  font-weight: normal; /* Optional: Define weights */
-		  font-style: normal; /* Optional: Define styles */
-		}
 
         section{
             /*
@@ -83,9 +80,14 @@
         }
         :root{
 
+            /*
             --r-main-font: 'Taipei Sans';
             --r-heading-font-weight: bold;
             --r-heading-font: #{$headingFont};
+            */
+
+            --r-main-font: 'Noto Sans TC';
+            --r-heading-font: 'Noto Sans TC';
 
 
         }
